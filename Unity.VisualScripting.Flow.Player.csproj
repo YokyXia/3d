@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{CD64801C-C326-B3AC-9E52-0BE5FCE66BF9}</ProjectGuid>
+    <ProjectGuid>{ECA9F0C2-A870-937C-46D4-B3ED352657E3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.VisualScripting.Flow</AssemblyName>
@@ -1039,11 +1039,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.VisualScripting.Core.Player.csproj">
-      <Project>{97041E9B-49EB-190C-EE17-6EA701FBDA22}</Project>
+      <Project>{E0C095F6-E486-8E73-9300-FF087A0F67B0}</Project>
       <Name>Unity.VisualScripting.Core.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
-      <Project>{FA5666ED-A02A-53BC-FE63-AD78FCB93DF6}</Project>
+      <Project>{2CC4B1B2-1A49-6C48-28D6-5B540D6DFD4D}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
   </ItemGroup>

@@ -1,5 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -11,13 +13,19 @@ public class Player : MonoBehaviour
     private float jumpTimeCounter;
     public float jumpTime =0.5f;
     private int flag = 0;
+    private bool flag2=false;
     private float time = 0f;
     private float time2 = 0f;
     public float suberModeTime = 2f;
+    private float suberModeRealContainTime = 10f;
     public float suberModeContainTime = 10f;
     private bool authorizationGet=false;
     public GameObject subermode_ui;
-
+    public Image supermode_ui;
+    private bool isShow = false;
+    public GameObject menu;
+    public GameObject dif;
+    public TMPro.TextMeshProUGUI m_enegy;
 
     private Rigidbody rb;
 
@@ -26,6 +34,8 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = (1);
+        GlobalData.Instance.enegy = 100;
     }
 
     void Update()
@@ -104,25 +114,35 @@ public class Player : MonoBehaviour
         //    }
         //}
 
-    //    Debug.Log(isGrounded);
+        //    Debug.Log(isGrounded);
 
-
-        // 视角旋转控制
-        float mouseX = Input.GetAxis("Mouse X");
-        float mouseY = Input.GetAxis("Mouse Y");
-        Vector3 rotation = new Vector3(0.0f, mouseX, 0.0f) * rotationSpeed;
-        rb.MoveRotation(rb.rotation * Quaternion.Euler(rotation));
-        Camera.main.transform.Rotate(-mouseY, 0.0f, 0.0f);
+        if (!isShow)
+        {
+            // 视角旋转控制
+            float mouseX = Input.GetAxis("Mouse X");
+            float mouseY = Input.GetAxis("Mouse Y");
+            Vector3 rotation = new Vector3(0.0f, mouseX, 0.0f) * rotationSpeed;
+            rb.MoveRotation(rb.rotation * Quaternion.Euler(rotation));
+            Camera.main.transform.Rotate(-mouseY, 0.0f, 0.0f);
+        }
         //Debug.Log("flag=" + flag);
-       // Debug.Log(GlobalData.Instance.suberMode);
+        // Debug.Log(GlobalData.Instance.suberMode);
+        m_enegy.text = "Enegy: " + GlobalData.Instance.enegy + "/100";
+        if (GlobalData.Instance.enegy < 0)
+        {
+            SceneManager.LoadScene("Lose");
+        }
+
         if (flag != 0)
         {
             time += Time.deltaTime;
             Debug.Log(time);
-            if(time > suberModeTime)
+            if(time > suberModeTime && GlobalData.Instance.normal)
             {
                 authorizationGet = true;
-                
+                suberModeRealContainTime = suberModeContainTime + (time-suberModeTime)/2;
+
+
             }
         }
         if (flag == 0)
@@ -132,13 +152,43 @@ public class Player : MonoBehaviour
 
         if (GlobalData.Instance.suberMode)
         {
+            if (!flag2)
+            {
+                GlobalData.Instance.enegy -= 2;
+                flag2 = true;
+            }
             time2 += Time.deltaTime;
             subermode_ui.SetActive(true);
-            if (time2> suberModeContainTime)
+            supermode_ui.fillAmount = (suberModeRealContainTime-time2) / suberModeRealContainTime;
+            if (time2> suberModeRealContainTime)
             {
                 GlobalData.Instance.suberMode = false;
                 subermode_ui.SetActive(false);
                 time2 = 0f;
+                flag2 = false;
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            //如果面板正在显示，关掉面板并让游戏继续运行
+            if (isShow)
+            {
+                menu.SetActive(false);
+                isShow = false;
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                Time.timeScale = (1);
+                dif.SetActive(false);
+            }
+            //否则开启面板并暂停游戏
+            else
+            {
+                menu.SetActive(true);
+                isShow = true;
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+                Time.timeScale = (0);
             }
         }
     }

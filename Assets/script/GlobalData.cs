@@ -26,4 +26,8 @@ public class GlobalData
     public bool suberMode { get; set; } = false;
 
     public bool timeFreeze { get; set; } = false;
+
+    public bool normal { get; set; } = true;
+
+    public int enegy { get; set; } = 100;
 }
