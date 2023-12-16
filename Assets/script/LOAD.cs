@@ -10,7 +10,6 @@ public class LOAD : MonoBehaviour
         GlobalData.Instance.qteSuccess = false;
         GlobalData.Instance.suberMode = false;
         GlobalData.Instance.timeFreeze = false;
-        GlobalData.Instance.normal = true;
         GlobalData.Instance.enegy = 100;
 
     }

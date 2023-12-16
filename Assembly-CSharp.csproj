@@ -66,6 +66,7 @@
     <Compile Include="Assets\script\QTE.cs" />
     <Compile Include="Assets\script\Player.cs" />
     <Compile Include="Assets\script\Ground.cs" />
+    <Compile Include="Assets\script\Win.cs" />
     <Compile Include="Assets\script\Footstep.cs" />
     <Compile Include="Assets\script\Begin.cs" />
   </ItemGroup>

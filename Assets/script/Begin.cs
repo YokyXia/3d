@@ -10,7 +10,7 @@ public class Begin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Diff.SetActive(false);
+       Diff.SetActive(false);
     }
 
     // Update is called once per frame
@@ -27,7 +27,7 @@ public class Begin : MonoBehaviour
     public void goStart()
     {
         SceneManager.LoadScene("Start");
-        Debug.Log("starty");
+        GlobalData.Instance.normal = true;
     }
 
     public void adjustDiff()

@@ -362,6 +362,7 @@
 "Assets/script/QTE.cs"
 "Assets/script/Sea.cs"
 "Assets/script/UI.cs"
+"Assets/script/Win.cs"
 -langversion:9.0
 
 /deterministic
