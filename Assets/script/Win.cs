@@ -21,6 +21,7 @@ public class Win : MonoBehaviour
     {
         if (other.gameObject.GetComponent<Player>() != null)
         {
+
             SceneManager.LoadScene("Win");
         }
     }
