@@ -5,7 +5,7 @@ using UnityEngine;
 public class LOAD : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         GlobalData.Instance.qteSuccess = false;
         GlobalData.Instance.suberMode = false;

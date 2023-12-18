@@ -14,9 +14,10 @@ public class Begin : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void goPlay()

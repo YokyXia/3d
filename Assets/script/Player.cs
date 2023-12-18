@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = (1);
-        GlobalData.Instance.enegy = 100;
+        
     }
 
     void Update()
@@ -128,8 +128,10 @@ public class Player : MonoBehaviour
         //Debug.Log("flag=" + flag);
         // Debug.Log(GlobalData.Instance.suberMode);
         m_enegy.text = "Enegy: " + GlobalData.Instance.enegy + "/100";
-        if (GlobalData.Instance.enegy < 0)
+        if (GlobalData.Instance.enegy <= 0)
         {
+            //Cursor.visible = true;
+            //Cursor.lockState = CursorLockMode.Locked;
             SceneManager.LoadScene("Lose");
         }
 
