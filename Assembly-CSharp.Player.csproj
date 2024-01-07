@@ -65,10 +65,13 @@
     <Compile Include="Assets\script\LOAD.cs" />
     <Compile Include="Assets\script\QTE.cs" />
     <Compile Include="Assets\script\Player.cs" />
+    <Compile Include="Assets\script\TransmitTo2.cs" />
+    <Compile Include="Assets\script\Transmit.cs" />
     <Compile Include="Assets\script\Ground.cs" />
     <Compile Include="Assets\script\Win.cs" />
     <Compile Include="Assets\script\Footstep.cs" />
     <Compile Include="Assets\script\Begin.cs" />
+    <Compile Include="Assets\script\TransmitTo1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

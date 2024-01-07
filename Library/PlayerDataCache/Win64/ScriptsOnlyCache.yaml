@@ -8,6 +8,9 @@ ScriptsOnlyBuild:
     - Player
     - QTE
     - Sea
+    - Transmit
+    - TransmitTo1
+    - TransmitTo2
     - UI
     - Win
     Unity.Rider.Editor.dll:
@@ -172,6 +175,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5972}
     - Class: 114
       Script: {instanceID: 6946}
+    - Class: 114
+      Script: {instanceID: 23640}
+    - Class: 114
+      Script: {instanceID: 23710}
+    - Class: 114
+      Script: {instanceID: 23720}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1162,7 +1171,7 @@ ScriptsOnlyBuild:
     className: UnityOnMoveMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 71b2aff1aa8cc8cf49260d8317764e80
+      Hash: 0a18f0cdb3cb7b2aa932f9135819d200
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Player
@@ -1250,10 +1259,28 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 7685529894fe747a07b140bd84b73cb9
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Transmit
+  - hash:
+      serializedVersion: 2
+      Hash: 1b37861b322cc82d853e13d9c60b632c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TransmitTo1
+  - hash:
+      serializedVersion: 2
+      Hash: b3f686189d1c8a0fdde26df948a4db3b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TransmitTo2
   platform: 19
   scenePathNames:
   - Assets/Scenes/Start.unity
   - Assets/Scenes/Game.unity
   - Assets/Scenes/Win.unity
   - Assets/Scenes/Lose.unity
-  playerPath: F:/3d/3Dnew.exe
+  playerPath: C:/Users/wengz/Desktop/3d/3Dnew.exe

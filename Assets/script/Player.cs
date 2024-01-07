@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     private bool isShow = false;
     public GameObject menu;
     public GameObject dif;
+    public GameObject transmit_to;
     public TMPro.TextMeshProUGUI m_enegy;
 
     private Rigidbody rb;
@@ -35,6 +36,10 @@ public class Player : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = (1);
+        if (GlobalData.Instance.normal == false)
+        {
+            transmit_to.SetActive(false);
+        }
         
     }
 
@@ -138,7 +143,7 @@ public class Player : MonoBehaviour
         if (flag != 0)
         {
             time += Time.deltaTime;
-            Debug.Log(time);
+          //  Debug.Log(time);
             if(time > suberModeTime && GlobalData.Instance.normal)
             {
                 authorizationGet = true;
