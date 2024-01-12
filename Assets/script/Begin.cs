@@ -22,7 +22,7 @@ public class Begin : MonoBehaviour
 
     public void goPlay()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Level1");
     }
 
     public void goStart()
@@ -48,12 +48,12 @@ public class Begin : MonoBehaviour
     public void start_normal()
     {
         GlobalData.Instance.normal = true;
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Level1");
     }
 
     public void start_hard()
     {
         GlobalData.Instance.normal = false;
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Level1");
     }
 }
