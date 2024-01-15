@@ -8,7 +8,7 @@ public class ControllerR : MonoBehaviour
     public GameObject footstep_r;
     public GameObject ConR;
     public float rotationAngle = 10f;
-    private bool isin=false;
+    private bool isin = false;
 
     void Update()
     {
@@ -36,13 +36,13 @@ public class ControllerR : MonoBehaviour
     IEnumerator Rotate(float angle)
     {
         Quaternion startRotation = footstep_r.transform.rotation;
-        Quaternion endRotation = Quaternion.Euler(0f, 0f, angle) * startRotation;
+        Quaternion endRotation = Quaternion.Euler(0f, angle,0f) * startRotation;
         float elapsedTime = 0f;
         float rotationTime = 1f; // 自转时间
 
         while (elapsedTime < rotationTime)
         {
-            footstep_r.transform.RotateAround(footstep_r.transform.position, Vector3.forward, angle * Time.deltaTime / rotationTime);
+            footstep_r.transform.RotateAround(footstep_r.transform.position, Vector3.up, angle * Time.deltaTime / rotationTime);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
