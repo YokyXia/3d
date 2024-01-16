@@ -30,8 +30,14 @@ public class Player : MonoBehaviour
 
     private Rigidbody rb;
 
+    //protected Animator anim;
+
+
     void Start()
     {
+
+        //anim = GetComponent<Animator>();
+
         rb = GetComponent<Rigidbody>();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -81,6 +87,7 @@ public class Player : MonoBehaviour
             if (jumpTimeCounter > 0)
             {
                 if(flag==1)
+                //anim.SetBool("IsJumping", true);
                 Jump();
                 jumpTimeCounter -= Time.deltaTime;
             }
@@ -89,6 +96,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
+            //anim.SetBool("IsJumping", false);
             isJumping = false;
         }
 
