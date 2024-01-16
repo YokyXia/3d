@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public float jumpForce = 10.0f;
     public float rotationSpeed = 3.0f;
   //  private bool isGrounded;
-    private bool isJumping=false;
+    public bool isJumping=false;
     private float jumpTimeCounter;
     public float jumpTime =0.5f;
     private int flag = 0;
