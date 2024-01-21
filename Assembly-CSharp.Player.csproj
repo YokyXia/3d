@@ -59,11 +59,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\script\UI.cs" />
+    <Compile Include="Assets\script\ControllerBAF.cs" />
     <Compile Include="Assets\script\Sea.cs" />
     <Compile Include="Assets\script\Cube.cs" />
     <Compile Include="Assets\script\GlobalData.cs" />
     <Compile Include="Assets\script\LOAD.cs" />
     <Compile Include="Assets\script\QTE.cs" />
+    <Compile Include="Assets\script\ControllerBAF2.cs" />
     <Compile Include="Assets\script\Player.cs" />
     <Compile Include="Assets\script\TransmitTo2.cs" />
     <Compile Include="Assets\script\Transmit.cs" />
@@ -72,6 +74,8 @@
     <Compile Include="Assets\script\Footstep.cs" />
     <Compile Include="Assets\script\Begin.cs" />
     <Compile Include="Assets\script\TransmitTo1.cs" />
+    <Compile Include="Assets\script\ControllerR.cs" />
+    <Compile Include="Assets\script\PlayerAni.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public float moveSpeed = 5.0f;
-    public float jumpForce = 10.0f;
+    public float jumpForce = 9.0f;
+    public float supportForce = 5f;
     public float rotationSpeed = 3.0f;
   //  private bool isGrounded;
     public bool isJumping=false;
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour
     public GameObject dif;
     public GameObject transmit_to;
     public TMPro.TextMeshProUGUI m_enegy;
+    //private bool jumpForceFlag=false;
 
     private Rigidbody rb;
 
@@ -98,7 +100,19 @@ public class Player : MonoBehaviour
         {
             //anim.SetBool("IsJumping", false);
             isJumping = false;
+            //jumpForceFlag = true;
+            GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, supportForce, GetComponent<Rigidbody>().velocity.z);
+
         }
+
+        //if (jumpForceFlag)
+        //{
+        //    Debug.Log("123");
+        //}
+        //if (time == 0f)
+        //{
+        //    jumpForceFlag = false;
+        //}
 
 
         //if (isGrounded && Input.GetKeyDown(KeyCode.Space))
@@ -206,6 +220,7 @@ public class Player : MonoBehaviour
                 Time.timeScale = (0);
             }
         }
+        GlobalData.Instance.jumpTime = time;
     }
     
 

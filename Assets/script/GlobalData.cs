@@ -32,4 +32,8 @@ public class GlobalData
     public int enegy { get; set; } = 100;
 
     public int transmit_to { get; set; } = 0;
+
+    public float jumpTime { get; set; } = 0f;
+
+   // public bool lingshi { get; set; } = false;
 }
