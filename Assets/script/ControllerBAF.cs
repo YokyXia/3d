@@ -13,6 +13,7 @@ public class ControllerBAF : MonoBehaviour
     public Transform pointA;
     public Transform pointB;
     public float speed = 10f; // 移动速度
+ //   private bool isMovingToPointA=false; // 是否正在向A点移动
 
     private bool isMoving = false; // 是否正在移动
     void Start()
@@ -90,6 +91,11 @@ public class ControllerBAF : MonoBehaviour
             isin = false;
         }
 
+    }
+
+    private void MoveToPoint(Transform target)
+    {
+        footstep.transform.position = target.position;
     }
 
 

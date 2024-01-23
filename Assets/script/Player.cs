@@ -6,10 +6,11 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public float moveSpeed = 5.0f;
-    public float jumpForce = 10.0f;
+    public float jumpForce = 9.0f;
+    public float supportForce = 5f;
     public float rotationSpeed = 3.0f;
   //  private bool isGrounded;
-    private bool isJumping=false;
+    public bool isJumping=false;
     private float jumpTimeCounter;
     public float jumpTime =0.5f;
     private int flag = 0;
@@ -27,11 +28,18 @@ public class Player : MonoBehaviour
     public GameObject dif;
     public GameObject transmit_to;
     public TMPro.TextMeshProUGUI m_enegy;
+    //private bool jumpForceFlag=false;
 
     private Rigidbody rb;
 
+    //protected Animator anim;
+
+
     void Start()
     {
+
+        //anim = GetComponent<Animator>();
+
         rb = GetComponent<Rigidbody>();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -81,6 +89,7 @@ public class Player : MonoBehaviour
             if (jumpTimeCounter > 0)
             {
                 if(flag==1)
+                //anim.SetBool("IsJumping", true);
                 Jump();
                 jumpTimeCounter -= Time.deltaTime;
             }
@@ -89,8 +98,21 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
+            //anim.SetBool("IsJumping", false);
             isJumping = false;
+            //jumpForceFlag = true;
+            GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, supportForce, GetComponent<Rigidbody>().velocity.z);
+
         }
+
+        //if (jumpForceFlag)
+        //{
+        //    Debug.Log("123");
+        //}
+        //if (time == 0f)
+        //{
+        //    jumpForceFlag = false;
+        //}
 
 
         //if (isGrounded && Input.GetKeyDown(KeyCode.Space))
@@ -198,6 +220,7 @@ public class Player : MonoBehaviour
                 Time.timeScale = (0);
             }
         }
+        GlobalData.Instance.jumpTime = time;
     }
     
 

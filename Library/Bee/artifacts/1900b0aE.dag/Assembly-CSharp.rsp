@@ -120,6 +120,7 @@
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/UnityPackages/JsonNet/Newtonsoft.Json.dll"
 -r:"F:/Unity/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"F:/Unity/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
 -r:"F:/Unity/Editor/Data/Managed/UnityEngine/UnityEditor.DiagnosticsModule.dll"
@@ -352,8 +353,19 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -analyzer:"F:/Unity/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"F:/Unity/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
+"Assets/Quixel/Scripts/BridgeImporter/MegascansBridgeLink.cs"
+"Assets/Quixel/Scripts/BridgeImporter/MegascansDecalTools.cs"
+"Assets/Quixel/Scripts/BridgeImporter/MegascansImporter.cs"
+"Assets/Quixel/Scripts/BridgeImporter/MegascansImporterWindow.cs"
+"Assets/Quixel/Scripts/BridgeImporter/MegascansMatertialUtils.cs"
+"Assets/Quixel/Scripts/BridgeImporter/MegascansMeshUtils.cs"
+"Assets/Quixel/Scripts/BridgeImporter/MegascansPostProcess.cs"
+"Assets/Quixel/Scripts/BridgeImporter/MegascansTerrainTools.cs"
+"Assets/Quixel/Scripts/BridgeImporter/MegascansTextureProcessor.cs"
+"Assets/Quixel/Scripts/BridgeImporter/MegascansUtilities.cs"
 "Assets/script/Begin.cs"
 "Assets/script/ControllerBAF.cs"
+"Assets/script/ControllerBAF2.cs"
 "Assets/script/ControllerR.cs"
 "Assets/script/Cube.cs"
 "Assets/script/Footstep.cs"
@@ -361,6 +373,7 @@
 "Assets/script/Ground.cs"
 "Assets/script/LOAD.cs"
 "Assets/script/Player.cs"
+"Assets/script/PlayerAni.cs"
 "Assets/script/QTE.cs"
 "Assets/script/Sea.cs"
 "Assets/script/Transmit.cs"
@@ -368,6 +381,7 @@
 "Assets/script/TransmitTo2.cs"
 "Assets/script/UI.cs"
 "Assets/script/Win.cs"
+"Assets/UnityPackages/JsonNetSample/JsonNetSample.cs"
 -langversion:9.0
 
 /deterministic
