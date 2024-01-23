@@ -35,12 +35,18 @@ public class Sea : MonoBehaviour
     {
         
     }
-
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    if (other.gameObject.GetComponent<Player>() != null)
+    //    {
+    //        player.transform.position = new Vector3(0.5776469f, 4.9f, 4.2f);
+    //    }
+    //}
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<Player>() != null)
         {
-            player.transform.position = new Vector3(0.5776469f,4.9f,4.2f);
+            player.transform.position = new Vector3(0.5776469f, 4.9f, 4.2f);
         }
     }
 }
