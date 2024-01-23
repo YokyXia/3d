@@ -7,16 +7,19 @@ public class Player : MonoBehaviour
 {
     public float moveSpeed = 5.0f;
     public float jumpForce = 9.0f;
-    public float supportForce = 5f;
+    public float supportForce = 1.0f;
+    public float supportForceTime = 0.5f;
     public float rotationSpeed = 3.0f;
   //  private bool isGrounded;
     public bool isJumping=false;
     private float jumpTimeCounter;
     public float jumpTime =0.5f;
+    public float minJumpTime = 0.2f;
     private int flag = 0;
     private bool flag2=false;
     private float time = 0f;
     private float time2 = 0f;
+    private float time3 = 0f;
     public float suberModeTime = 2f;
     private float suberModeRealContainTime = 10f;
     public float suberModeContainTime = 10f;
@@ -28,7 +31,10 @@ public class Player : MonoBehaviour
     public GameObject dif;
     public GameObject transmit_to;
     public TMPro.TextMeshProUGUI m_enegy;
+    private bool jumpOver = false;
     //private bool jumpForceFlag=false;
+    private bool flag3 = false;
+    private bool jumpFunction = false;
 
     private Rigidbody rb;
 
@@ -62,7 +68,6 @@ public class Player : MonoBehaviour
         {
             rb.MovePosition(rb.position + movement);
         }
-        
 
         // Íæ¼ÒÌøÔ¾¿ØÖÆ
         //if (Input.GetKeyDown(KeyCode.Space))
@@ -70,6 +75,7 @@ public class Player : MonoBehaviour
         //    rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         //}
 
+ 
 
         if (Input.GetKeyDown(KeyCode.Space) && !isJumping )
         {
@@ -78,8 +84,11 @@ public class Player : MonoBehaviour
             jumpTimeCounter = jumpTime;
             flag++;
             if (flag == 1)
-            Jump();
-            
+            {
+                Jump();
+            }
+            flag3 = false;
+            time3 = supportForceTime;
         }
 
         if (Input.GetKey(KeyCode.Space) && isJumping)
@@ -88,12 +97,21 @@ public class Player : MonoBehaviour
             
             if (jumpTimeCounter > 0)
             {
-                if(flag==1)
+                if (flag == 1)
+                {
+                    Jump();
+                }
                 //anim.SetBool("IsJumping", true);
-                Jump();
                 jumpTimeCounter -= Time.deltaTime;
             }
-           
+            else
+            {
+                if(flag3 == false)
+                {
+                    jumpOver = true;
+                    flag3 = true;
+                }
+            }
         }
 
         if (Input.GetKeyUp(KeyCode.Space))
@@ -101,8 +119,38 @@ public class Player : MonoBehaviour
             //anim.SetBool("IsJumping", false);
             isJumping = false;
             //jumpForceFlag = true;
-            GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, supportForce, GetComponent<Rigidbody>().velocity.z);
+            if (jumpTimeCounter>=0)
+            {
+                jumpOver=true;
+            }
+            flag3 = true;
+        }
+        
+        if (flag3 && flag==1)
+        {
+            if (jumpTimeCounter > jumpTime - minJumpTime)
+            {
+                jumpTimeCounter -= Time.deltaTime;
+                Jump();
+            }
+        }
 
+        //if (jumpFunction)
+        //{
+        //    Jump();
+        //}
+
+        if(jumpOver && flag ==1)
+        {
+           // Debug.Log(jumpOver);
+            GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, supportForce, GetComponent<Rigidbody>().velocity.z);
+            time3-=Time.deltaTime;
+            if (time3 < 0)
+            {
+                jumpOver = false;
+                time3 = supportForceTime;
+            }
+            
         }
 
         //if (jumpForceFlag)
