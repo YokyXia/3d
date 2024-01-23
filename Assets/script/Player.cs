@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     public bool isJumping=false;
     private float jumpTimeCounter;
     public float jumpTime =0.5f;
-    public float minJumpTime = 0.2f;
+    public float minJumpTime = 0.1f;
     private int flag = 0;
     private bool flag2=false;
     private float time = 0f;
@@ -85,7 +85,7 @@ public class Player : MonoBehaviour
             flag++;
             if (flag == 1)
             {
-                Jump();
+                //Jump();
             }
             flag3 = false;
             time3 = supportForceTime;
@@ -143,7 +143,7 @@ public class Player : MonoBehaviour
         if(jumpOver && flag ==1)
         {
            // Debug.Log(jumpOver);
-            GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, supportForce, GetComponent<Rigidbody>().velocity.z);
+           // GetComponent<Rigidbody>().velocity = new Vector3(GetComponent<Rigidbody>().velocity.x, supportForce, GetComponent<Rigidbody>().velocity.z);
             time3-=Time.deltaTime;
             if (time3 < 0)
             {

@@ -46,7 +46,7 @@ public class Sea : MonoBehaviour
     {
         if (other.gameObject.GetComponent<Player>() != null)
         {
-            player.transform.position = new Vector3(0.5776469f, 4.9f, 4.2f);
+            player.transform.position = new Vector3(-369.681213f, 5.05000019f, 151.199158f);
         }
     }
 }
