@@ -67,7 +67,7 @@ Material:
     - EARTH_RADIUS: 6371000
     - _DetailScale: 1
     - _EnableDithering: 1
-    - _FogBlendHeight: 0.3
+    - _FogBlendHeight: 0.25
     - _FogGradient: 0.405
     - _FogGradientHeight: 0.472
     - _MaskMoon: 1
@@ -94,7 +94,7 @@ Material:
     - _uCloudsBaseScale: 1.72
     - _uCloudsBottom: 500
     - _uCloudsBottomSoftness: 0.4
-    - _uCloudsCoverage: 0.522
+    - _uCloudsCoverage: 0.458
     - _uCloudsCoverageBias: 0.0175
     - _uCloudsDensity: 1
     - _uCloudsDetailScale: 1000
@@ -106,12 +106,12 @@ Material:
     - _uCloudsLayerShadowMergeStepSize: 4
     - _uCloudsLayerTop: -70
     - _uCloudsMinTransmittance: 32.58
-    - _uCloudsMovementSpeed: 10
+    - _uCloudsMovementSpeed: 5
     - _uCloudsScatteringLerp: 0.5
     - _uCloudsShadowMergeStepMultiply: 1.3
     - _uCloudsShadowMergeStepSize: 10
     - _uCloudsTop: 2150
-    - _uCloudsTurbulenceSpeed: 24
+    - _uCloudsTurbulenceSpeed: 25
     - _uConverganceRate: 0.35
     - _uCurlScale: 1000
     - _uCurlStrength: 0.15

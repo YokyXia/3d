@@ -15,7 +15,7 @@ F:/3d1.24/3d
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-14907
+14264
 Successfully changed project path to: F:/3d1.24/3d
 F:/3d1.24/3d
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ F:/3d1.24/3d
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [42780] Host "[IP] 58.199.135.247 [Port] 0 [Flags] 2 [Guid] 1569751964 [EditorId] 1569751964 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-LET049F) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [4848] Host "[IP] 58.199.135.247 [Port] 0 [Flags] 2 [Guid] 2107814544 [EditorId] 2107814544 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-LET049F) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [42780] Host "[IP] 58.199.135.247 [Port] 0 [Flags] 2 [Guid] 1569751964 [EditorId] 1569751964 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-LET049F) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [4848] Host "[IP] 58.199.135.247 [Port] 0 [Flags] 2 [Guid] 2107814544 [EditorId] 2107814544 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-LET049F) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 19 workers.
-Refreshing native plugins compatible for Editor in 3.11 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.95 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.9f1 (ea401c316338)
 [Subsystems] Discovering subsystems at path F:/Unity/Editor/Data/Resources/UnitySubsystems
@@ -70,44 +70,44 @@ Initialize mono
 Mono path[0] = 'F:/Unity/Editor/Data/Managed'
 Mono path[1] = 'F:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'F:/Unity/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56996
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56900
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: F:/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002187 seconds.
-- Loaded All Assemblies, in  0.246 seconds
+Registered in 0.001233 seconds.
+- Loaded All Assemblies, in  0.210 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.174 seconds
-Domain Reload Profiling: 420ms
-	BeginReloadAssembly (77ms)
+- Finished resetting the current domain, in  0.163 seconds
+Domain Reload Profiling: 373ms
+	BeginReloadAssembly (69ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (23ms)
+	RebuildCommonClasses (24ms)
 	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (37ms)
-	LoadAllAssembliesAndSetupDomain (102ms)
-		LoadAssemblies (76ms)
+	initialDomainReloadingComplete (29ms)
+	LoadAllAssembliesAndSetupDomain (82ms)
+		LoadAssemblies (69ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (101ms)
-			TypeCache.Refresh (100ms)
-				TypeCache.ScanAssembly (91ms)
+		AnalyzeDomain (81ms)
+			TypeCache.Refresh (79ms)
+				TypeCache.ScanAssembly (71ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (174ms)
+	FinalizeReload (163ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (134ms)
+		SetupLoadedEditorAssemblies (127ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (4ms)
+			InitializePlatformSupportModulesInManaged (5ms)
 			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (90ms)
-			ProcessInitializeOnLoadMethodAttributes (33ms)
+			BeforeProcessingInitializeOnLoad (1ms)
+			ProcessInitializeOnLoadAttributes (84ms)
+			ProcessInitializeOnLoadMethodAttributes (31ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -115,55 +115,55 @@ Domain Reload Profiling: 420ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.525 seconds
-Refreshing native plugins compatible for Editor in 1.39 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.397 seconds
+Refreshing native plugins compatible for Editor in 1.47 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.560 seconds
-Domain Reload Profiling: 1086ms
-	BeginReloadAssembly (136ms)
+- Finished resetting the current domain, in  0.466 seconds
+Domain Reload Profiling: 862ms
+	BeginReloadAssembly (95ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
+		DisableScriptedObjects (3ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (28ms)
-	RebuildCommonClasses (25ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (39ms)
-	LoadAllAssembliesAndSetupDomain (317ms)
-		LoadAssemblies (258ms)
+		CreateAndSetChildDomain (17ms)
+	RebuildCommonClasses (20ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (23ms)
+	LoadAllAssembliesAndSetupDomain (252ms)
+		LoadAssemblies (194ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (135ms)
-			TypeCache.Refresh (118ms)
-				TypeCache.ScanAssembly (102ms)
-			ScanForSourceGeneratedMonoScriptInfo (11ms)
-			ResolveRequiredComponents (3ms)
-	FinalizeReload (561ms)
+		AnalyzeDomain (112ms)
+			TypeCache.Refresh (99ms)
+				TypeCache.ScanAssembly (87ms)
+			ScanForSourceGeneratedMonoScriptInfo (9ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (466ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (433ms)
+		SetupLoadedEditorAssemblies (372ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (3ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (41ms)
-			ProcessInitializeOnLoadAttributes (368ms)
-			ProcessInitializeOnLoadMethodAttributes (16ms)
-			AfterProcessingInitializeOnLoad (2ms)
+			BeforeProcessingInitializeOnLoad (34ms)
+			ProcessInitializeOnLoadAttributes (318ms)
+			ProcessInitializeOnLoadMethodAttributes (14ms)
+			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 5.02 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (5ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.95 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3275 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 38 unused Assets / (418.3 KB). Loaded Objects now: 3740.
-Memory consumption went from 210.4 MB to 209.9 MB.
-Total: 7.513900 ms (FindLiveObjects: 0.658600 ms CreateObjectMapping: 0.436300 ms MarkObjects: 5.787300 ms  DeleteObjects: 0.629200 ms)
+Unloading 38 unused Assets / (418.2 KB). Loaded Objects now: 3740.
+Memory consumption went from 210.4 MB to 210.0 MB.
+Total: 2.517400 ms (FindLiveObjects: 0.167600 ms CreateObjectMapping: 0.072800 ms MarkObjects: 2.139200 ms  DeleteObjects: 0.135800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -180,54 +180,9 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 138520.583866 seconds.
-  path: Assets/Materials/Surfaces/Icelandic Glacier_vf0nbbtn/Textures/Others/Diffuse_2K__vf0nbbtn.png
-  artifactKey: Guid(84eb8e6ab56cfcf44a12abf3e7567e3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Surfaces/Icelandic Glacier_vf0nbbtn/Textures/Others/Diffuse_2K__vf0nbbtn.png using Guid(84eb8e6ab56cfcf44a12abf3e7567e3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '807e77e4577b7a31bf46b874c991fa2b') in 0.093707 seconds
+  Time since last request: 214307.730003 seconds.
+  path: Assets/Materials/Surfaces/Icelandic Glacier_vf0nbbtn/Materials/Ice Lake 2.mat
+  artifactKey: Guid(08297562704da254c82c6dea0eb17485) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Surfaces/Icelandic Glacier_vf0nbbtn/Materials/Ice Lake 2.mat using Guid(08297562704da254c82c6dea0eb17485) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3319c95b4954588f7dc03beeb347d077') in 0.071054 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/Materials/Materials/vf0nbbtn_2K_Albedo.png
-  artifactKey: Guid(9b6cec2f4fae40a47970d0422be16fcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Materials/vf0nbbtn_2K_Albedo.png using Guid(9b6cec2f4fae40a47970d0422be16fcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fb06fe4b589dd2f89cc16cd73392cb5') in 0.015701 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Materials/Surfaces/Icelandic Glacier_vf0nbbtn/Textures/Normal_2K__vf0nbbtn.png
-  artifactKey: Guid(230c31b9aaabf4d43b649a65d14c4e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Surfaces/Icelandic Glacier_vf0nbbtn/Textures/Normal_2K__vf0nbbtn.png using Guid(230c31b9aaabf4d43b649a65d14c4e1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '066d470373cc9f882dc57ce96fffee06') in 0.052083 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000050 seconds.
-  path: Assets/Materials/Surfaces/Icelandic Glacier_vf0nbbtn/Textures/Transmission_2K__vf0nbbtn.png
-  artifactKey: Guid(9efd79ae8236ee04e94ad2a921f2328b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Surfaces/Icelandic Glacier_vf0nbbtn/Textures/Transmission_2K__vf0nbbtn.png using Guid(9efd79ae8236ee04e94ad2a921f2328b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce39dc8fa6ac096a84bd4b6c5457a1f7') in 0.014560 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Materials/Surfaces/Icelandic Glacier_vf0nbbtn/Textures/Others/Materials/Diffuse_2K__vf0nbbtn.mat
-  artifactKey: Guid(cb45d4f212d84cf4eac2da1dcbdada47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Surfaces/Icelandic Glacier_vf0nbbtn/Textures/Others/Materials/Diffuse_2K__vf0nbbtn.mat using Guid(cb45d4f212d84cf4eac2da1dcbdada47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a427eb6f8ad9ad717491ebcab4793371') in 0.057952 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.180104 seconds.
-  path: Assets/Materials/Surfaces/Icelandic Glacier_vf0nbbtn/Materials/vl3ieftg_2K_Displacement.exr
-  artifactKey: Guid(acc1a98900b03764994f29772cdc930c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Surfaces/Icelandic Glacier_vf0nbbtn/Materials/vl3ieftg_2K_Displacement.exr using Guid(acc1a98900b03764994f29772cdc930c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd135ad6e79df1708def745c2c04706b7') in 0.011309 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: 由于线程退出或应用程序请求，已中止 I/O 操作。
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+Number of asset objects unloaded after import = 1
